@@ -49,8 +49,6 @@ describe('Demo Blaze e2e flow', () => {
     await cartPage.open();
     await cartPage.waitForReadiness();
     let productDetails = await cartPage.getProductDetailsInCart(productInfo.name);
-    console.log('pppppprprprprpprprprpr name', productDetails.productName);
-    console.log('pppppprprprprpprprprpr price', productDetails.productPrice);
     expect(productDetails.productName).to.contain(productInfo.name);
     return expect(productPrice).to.contain(productDetails.productPrice);
   });

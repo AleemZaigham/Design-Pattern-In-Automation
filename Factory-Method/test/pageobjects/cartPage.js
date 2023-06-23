@@ -56,8 +56,6 @@ export class CartPage extends BasePage {
       timeoutMsg: 'Waiting for product price to be displayed'
     });
     let productPrice = await productPriceSelector.getText();
-    console.log('Product name', productName);
-    console.log('Product Price',productPrice);
     return { productName, productPrice }
   }
 
