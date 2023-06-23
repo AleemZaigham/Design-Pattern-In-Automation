@@ -1,0 +1,13 @@
+# Downloaded dependencies
+node_modules/
+
+# IDE generated files
+/.idea/*
+!/.idea/codeStyles
+!/.idea/codeStyles/*
+
+# OS generated files
+.DS_Store
+
+# allure
+allure-results
