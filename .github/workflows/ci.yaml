@@ -10,7 +10,7 @@ jobs:
         with:
           node-version: 18
       - name: Install
-        run: npm install
+        run: cd Page-Object-Model && npm install
       - name: Test
         run: npm run wdio
       - uses: actions/upload-artifact@v1
