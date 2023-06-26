@@ -12,7 +12,7 @@ jobs:
       - name: Install
         run: cd Page-Object-Model && npm install
       - name: Test
-        run: npm run wdio
+        run: cd Page-Object-Model && npm run wdio
       - uses: actions/upload-artifact@v1
         with:
           name: Allure Report
