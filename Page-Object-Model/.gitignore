@@ -3,6 +3,7 @@ node_modules/
 
 # IDE generated files
 /.idea/*
+../.idea/
 !/.idea/codeStyles
 !/.idea/codeStyles/*
 
@@ -11,3 +12,4 @@ node_modules/
 
 # allure
 allure-results
+allure-report
