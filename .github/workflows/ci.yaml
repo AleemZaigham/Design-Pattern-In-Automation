@@ -11,9 +11,21 @@ jobs:
           node-version: 18
       - name: Install
         run: cd Factory-Method && npm install
-      - name: Test
-        run: cd Factory-Method && npm run wdio
+      - name: Test for phone
+        run: cd Factory-Method && npm run wdio-phone
       - uses: actions/upload-artifact@v1
         with:
-          name: Allure Report
+          name: Allure Report For Phone
+          path: ./Factory-Method/allure-results
+      - name: Test for laptop
+        run: cd Factory-Method && npm run wdio-laptop
+      - uses: actions/upload-artifact@v1
+        with:
+          name: Allure Report For Laptop
+          path: ./Factory-Method/allure-results
+      - name: Test for monitor
+        run: cd Factory-Method && npm run wdio-monitor
+      - uses: actions/upload-artifact@v1
+        with:
+          name: Allure Report For Monitor
           path: ./Factory-Method/allure-results
