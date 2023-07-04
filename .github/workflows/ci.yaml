@@ -1,0 +1,19 @@
+name: Facade Pattern
+on: [push]
+jobs:
+  build:
+    runs-on: macos-13
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 18
+      - name: Install
+        run: cd Facade-Pattern && npm install
+      - name: Test
+        run: cd Facade-Pattern && npm run wdio
+      - uses: actions/upload-artifact@v1
+        with:
+          name: Allure Report
+          path: ./Facade-Pattern/allure-results
