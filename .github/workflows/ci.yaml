@@ -17,12 +17,6 @@ jobs:
         with:
           name: Allure Report For Phone
           path: ./Factory-Method/allure-results
-      - name: Test for laptop
-        run: cd Factory-Method && npm run wdio-laptop
-      - uses: actions/upload-artifact@v1
-        with:
-          name: Allure Report For Laptop
-          path: ./Factory-Method/allure-results
       - name: Test for monitor
         run: cd Factory-Method && npm run wdio-monitor
       - uses: actions/upload-artifact@v1

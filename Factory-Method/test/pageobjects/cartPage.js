@@ -13,12 +13,6 @@ export class CartPage extends BasePage {
   get #productDetails() {
     return $('#tbodyid');
   }
-  // get #productName() {
-  //   return this.#productDetails.$('td:nth-child(2)');
-  // }
-  // get #productPrice() {
-  //   return this.#productDetails.$('td:nth-child(3)');
-  // }
   get #placeOrderBtn() {
     return $('[data-target*="order"]');
   }
@@ -27,13 +21,6 @@ export class CartPage extends BasePage {
     return super.waitForReadiness(this.#productDetails);
   }
 
-  // async getName() {
-  //   return this.#productName.getText();
-  // }
-  //
-  // async getPrice() {
-  //   return this.#productPrice.getText();
-  // }
 
   async placeOrder() {
     await this.#placeOrderBtn.waitForClickable({
